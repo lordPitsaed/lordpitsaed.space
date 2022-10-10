@@ -1,0 +1,46 @@
+:root {
+    --background-color: rgba(84, 84, 84, .8);
+    --text-color-1: rgb(255, 224, 244);
+    --text-color-2: white
+}
+
+html {
+    min-width: 500px;
+    background: radial-gradient(#e66465, #9198e5);
+}
+
+.wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 3vh 5vw 5vh 5vw;
+    width: 80%;
+    height: 80%;
+    background-color: var(--background-color);
+}
+
+.header {
+    color: var(--text-color-1);
+    font-size: 5vh;
+    text-align: right;
+    margin-bottom: 2vh;
+}
+
+.container {
+    padding: 15px 0 15px 0;
+}
+
+.simple-text {
+    color: var(--text-color-2);
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2vh;
+}
+
+.bottom {
+    margin-top: 65%;
+    text-align: right;
+}
