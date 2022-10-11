@@ -7,7 +7,7 @@
 }
 
 html {
-    box-sizing: content-box;
+    box-sizing: border-box;
     min-width: 500px;
     background: radial-gradient(#e66465, #9198e5);
 }
@@ -34,30 +34,30 @@ html {
     text-align: right;
 }
 
-.container img {
+img {
     display: block;
     margin: 0 auto;
+}
+
+.container img {
     margin-top: 2vh;
     margin-bottom: 15px;
 }
 
 .minecraft-link, .minecraft-link img {
     width: 2vw;
-    display: block;
-    margin: 0 auto;
 }
 
-.bottom {
-    margin-top: 65%;
-    text-align: right;
-}
-
-.footer{
-    max-width: 500px;
+.footer {
     width: 80%;
     margin: 0 auto;
     background-color: var(--background-color);
     padding: 3vh 5vw 5vh 5vw;
     border-top: solid var(--border-color) 1px;
     box-shadow: 10px 5px 50px var(--shadow-color);
+}
+
+.bottom {
+    margin-top: 65%;
+    text-align: right;
 }
