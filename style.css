@@ -13,7 +13,7 @@ html {
 }
 
 .wrapper {
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 3vh 5vw 5vh 5vw;
     width: 80%;
@@ -29,22 +29,19 @@ html {
     margin-bottom: 2vh;
 }
 
-.container {
-    padding: 15px 0 15px 0;
-}
-
 .simple-text {
     color: var(--text-color-2);
-    text-align: center;
+    text-align: right;
 }
 
 .container img {
     display: block;
     margin: 0 auto;
     margin-top: 2vh;
+    margin-bottom: 15px;
 }
 
-a img, a {
+.minecraft-link, .minecraft-link img {
     width: 2vw;
     display: block;
     margin: 0 auto;
@@ -55,8 +52,8 @@ a img, a {
     text-align: right;
 }
 
-footer{
-    max-width: 600px;
+.footer{
+    max-width: 500px;
     width: 80%;
     margin: 0 auto;
     background-color: var(--background-color);
