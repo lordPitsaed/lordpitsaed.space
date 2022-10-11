@@ -44,11 +44,17 @@ img {
     margin-bottom: 15px;
 }
 
-.minecraft-link, .minecraft-link img {
+.minecraft-link img {
     width: 2vw;
 }
 
+.minecraft-link{
+    width: 2vw;
+    display: inline-block;
+}
+
 .footer {
+    max-width: 500px;
     width: 80%;
     margin: 0 auto;
     background-color: var(--background-color);
