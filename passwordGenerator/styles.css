@@ -121,7 +121,7 @@ input.inactive{
     background: var(--password-form-color);
     padding: 0.5rem;
     max-width: 600px;
-    height: 15rem;
+    height: 20rem;
     justify-content: space-around;
     margin-top: 1.1rem;
 }
