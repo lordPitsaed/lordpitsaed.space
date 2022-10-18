@@ -1,0 +1,308 @@
+:root{
+    box-sizing: border-box;
+
+    --background-color: linear-gradient(0deg, rgba(9,8,13,1) 0%, rgba(19, 18, 25, 1) 100%);
+    --password-form-color: rgba(36, 35, 43, 1);
+    --text-color: rgb(234, 248, 243);
+    --text-header-color: rgb(234, 248, 243);
+    
+
+    --range-color: rgb(164, 255, 175);
+    --range-thumb-color:rgb(234, 248, 243) ;
+    --range-thumb-hover-color: rgba(36, 35, 43, 1);
+    --range-thumb-hover-border-color: rgb(164, 255, 175);
+
+    --checkbox-background-color: rgba(0,0,0,0);
+    --checkbox-hover-color: rgba(164, 255, 175,0.4);
+    --checkbox-checkmark-color: rgba(36, 35, 43, 1);
+    --checkbox-border-color: rgb(234, 248, 243);
+    --checkbox-checked-border-color: rgb(164, 255, 175);
+
+    --button-color:rgb(164, 255, 175);
+    --button-text-color: rgba(36, 35, 43, 1);
+    --button-hover-color: rgba(36, 35, 43, 1);
+    --button-hover-text-color: rgb(164, 255, 175);
+    --button-hover-border-color: rgb(164, 255, 175);
+
+    --password-strength-color: rgb(24, 23, 31);
+    --strength-cell-border-color: rgb(234, 248, 243);
+    --strength-cell-easy-color: lightgreen;
+    --strength-cell-medium-color: orange;
+    --strength-cell-hard-color: crimson;
+    
+
+    --output-inactive:rgba(234, 248, 243, 0.5);
+    --output-active:rgb(234, 248, 243);
+    --output-button-hover: rgb(164, 255, 175);
+}
+
+html{
+    height: 100%;
+    font-size: 25px;
+    font-family: monospace;
+    background: var(--background-color) no-repeat center;
+    color: var(--text-color);
+    /* overflow: hidden; */
+}
+
+body{
+    margin: 0;
+    margin-top: auto;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.header{
+    text-align: center;
+    color: var(--text-header-color);
+    font-size: 1.1rem;
+}
+
+.password-output{
+    width: 50%;
+    height: 2.3rem;
+    background: var(--password-form-color);
+    margin: 0 auto;
+    border-radius: 2px;
+    max-width: 600px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.password-output input {
+    border: none;
+    background-color: var(--password-form-color);
+    color: var(--text-color);
+    text-align: left;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    width: 80%;
+}
+
+.password-output input:focus{
+    outline: none;
+}
+
+input.inactive{
+    color: var(--output-inactive);
+}
+
+.password-output button{
+    background-color: var(--password-form-color);
+    border:none;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    color: var(--text-color);
+    transition: ease-in .2;
+}
+
+.password-output button:hover{
+    color: var(--output-button-hover)
+}
+
+.password-form{
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    background: var(--password-form-color);
+    padding: 0.5rem;
+    max-width: 600px;
+    height: 15rem;
+    justify-content: space-around;
+    margin-top: 1.1rem;
+}
+
+/* RANGE SELECTOR STYLE  */
+
+.length-input{
+    width: 90%;
+}
+
+#length{
+    appearance: none;
+    width: 100%;
+    height: 0.4rem;
+    background: var(--range-color);
+    border-radius: 1rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+#length:hover{
+    opacity: 1;
+}
+
+#length::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border: solid transparent 2px;
+    border-radius: 100%;
+    cursor: pointer;
+    background:var(--range-thumb-color);
+    transition: ease-in .2s;
+}
+
+#length::-webkit-slider-thumb:hover{
+    border-color: var(--range-thumb-hover-border-color);
+    background: var(--range-thumb-hover-color);
+}
+
+.length-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* RANGE SELECTOR STYLE END */
+
+/* CHECKBOX STYLE */
+
+.checkbox-container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 90%;
+    height: 30px;
+    text-align: right;
+}
+
+input[type='checkbox']{
+    position: absolute;
+    top:0;
+    left: 0;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+}
+
+.checkbox{
+    height: 1rem;
+    width: 1rem;
+    border: solid var(--checkbox-border-color) 2px;
+    background: var(--checkbox-background-color);
+    transition: ease-in .2s;
+}
+
+.checkbox-container:hover input ~ .checkbox{
+    background: var(--checkbox-hover-color);
+}
+
+.checkbox:after {
+  content: "";
+  display: none;
+  position: relative;
+}
+
+.checkbox-container input:checked ~ .checkbox:after {
+  display: block;
+}
+
+.checkbox-container input:checked ~ .checkbox {
+  border-color: var(--checkbox-checked-border-color);
+  background-color: var(--checkbox-checked-border-color);
+}
+
+.checkbox-container .checkbox:after {
+  top: 0.12rem;
+  left: 0.36rem;
+  width: 0.2rem;
+  height: 0.5rem;
+  border: solid var(--checkbox-checkmark-color);
+  border-width: 0 0.15rem 0.15rem 0;
+  transform: rotate(45deg);
+}
+
+/* CHECKBOX STYLE END*/
+
+/* BUTTON STYLE */
+#genrate-button{
+    width: 90%;
+    height: 2rem;
+    background: var(--button-color);
+    color: var(--button-text-color);
+    transition: ease-in .2s;
+    font-family:monospace;
+    font-size: 0.9rem;
+    border: none;
+}
+
+#genrate-button:hover{
+    background: var(--button-hover-color);
+    color: var(--button-hover-text-color);
+    border: solid var(--button-hover-border-color)
+}
+
+/* BUTTON STYLE END */
+
+/* STRGTH STYLE */
+
+.password-strength{
+    width: 85%;
+    height: 2rem;
+    background: var(--password-strength-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+    border-radius: 2px;
+}
+
+.strength{
+    
+    width: 35%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.strength span:first-of-type{
+    margin-right: 0.4rem;
+}
+
+.cell{
+    width: 0.6rem;
+    height: 1.2rem;
+    display: inline-block;
+    border: solid var(--strength-cell-border-color) 2px;
+    border-radius: 2px;
+}
+
+#first-cell{
+    background-color: var(--strength-cell-easy-color);
+}
+
+/* STRGTH STYLE END*/
+
+@media screen and (max-width: 800px) {
+    html{
+        font-size: 15px;
+    }
+    
+}
+
+@media screen and (max-height: 500px) {
+    html{font-size: 15px;}
+    body{margin: 0}
+    
+}

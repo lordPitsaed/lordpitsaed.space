@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/0b5c612be9.js" crossorigin="anonymous"></script>
+    <title>PCC Password Generator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+        <h1 class="header">Pitsaed Password Generator</h1>
+        <div class="password-output">
+            <input type="text" value="P4$5W0rD!" id="output" readonly class="inactive">
+            <button onclick="copyOutput()"><i class="fa-regular fa-copy"></i></button>
+        </div>
+        <div class="password-form">
+            <div class="length-input">
+                <div class="length-header">
+                    <span>Character Length</span>
+                    <span class="range-value">10</span>
+                </div>
+                <input type="range" name="password-length" id="length" min = '10' max ='20' value="10" step = '1'> 
+            </div>
+            <label for="uppercase" class="checkbox-container">Include Uppercase letters
+                <input type="checkbox" name="uppercase-checkbox" id="uppercase">
+                <span class="checkbox"></span>
+            </label>
+
+            <label for="lowercase" class="checkbox-container">Include Lowercase letters
+                <input type="checkbox" name="lowercase-checkbox" id="lowercase">
+                <span class="checkbox"></span>
+            </label>
+            <label for="numbers" class="checkbox-container">Include Numbers
+                <input type="checkbox" name="numbers-checkbox" id="numbers" checked="checked">
+                <span class="checkbox"></span>
+            </label>
+
+            <label for="symbols" class="checkbox-container">Include Symbols
+                <input type="checkbox" name="symbols-checkbox" id="symbols">
+                <span class="checkbox"></span>
+            </label>
+
+            <div class="password-strength">
+                <span>STRENGTH</span>
+                <div class="strength">
+                    <span id="strength-output">EASY</span>
+                    <span class="cell" id = 'first-cell'></span>
+                    <span class="cell" id = 'second-cell' ></span>
+                    <span class="cell" id = 'third-cell'></span>
+                </div>
+            </div>
+
+            <input id="genrate-button" type="button" value="GENRATE" onclick="setOutput()">
+
+            <div class="password-strong"></div>
+        </div>
+</body>
+<script src="script.js"></script>
+<script tpye="text/javascript">
+    $('#length').on('input', function(){
+        $('.range-value').text(Number(document.getElementById('length').value))
+    });
+</script>
+</html>
