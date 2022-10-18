@@ -276,6 +276,13 @@ input[type='checkbox']{
     justify-content: space-between;
 }
 
+.cells {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    justify-content: space-evenly;
+}
+
 .strength span:first-of-type{
     margin-right: 0.4rem;
 }
@@ -291,6 +298,8 @@ input[type='checkbox']{
 #first-cell{
     background-color: var(--strength-cell-easy-color);
 }
+
+#first-cell, #second-cell, #third-cell{margin:0}
 
 /* STRGTH STYLE END*/
 
