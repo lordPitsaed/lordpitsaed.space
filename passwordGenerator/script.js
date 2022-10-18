@@ -74,12 +74,15 @@ function setOutput(){
     let symbolsCheck = $('#symbols').is(':checked');
     let outputField = document.getElementById('output');
 
+    if (!uppercaseCheck && !lowercaseCheck && !numsCheck && !symbolsCheck){
+        alert('We need at least one char set to generate you a password!')
+    } else {
     let chars = generateChars(uppercaseCheck, lowercaseCheck, numsCheck, symbolsCheck);
     let output = generatePassword(length, chars);
     let passwordPool = chars.length
     outputField.setAttribute('value', output);
     outputField.setAttribute('class', 'active');
     passwordStrength(length, passwordPool)
-
+    }
 }
 

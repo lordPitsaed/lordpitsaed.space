@@ -67,7 +67,6 @@ body{
 }
 
 .password-output{
-    width: 50%;
     height: 2.3rem;
     background: var(--password-form-color);
     margin: 0 auto;
@@ -94,7 +93,7 @@ body{
     outline: none;
 }
 
-input.inactive{
+input.inactive, span.inactive{
     color: var(--output-inactive);
 }
 
@@ -116,7 +115,6 @@ input.inactive{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
     margin: 0 auto;
     background: var(--password-form-color);
     padding: 0.5rem;
@@ -167,7 +165,13 @@ input.inactive{
 .length-header{
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
+}
+
+.range-value {
+    color:rgb(164, 255, 175);
+    font-size: 1.5rem;
 }
 
 /* RANGE SELECTOR STYLE END */
@@ -303,9 +307,13 @@ input[type='checkbox']{
 
 /* STRGTH STYLE END*/
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     html{
         font-size: 15px;
+    }
+
+    .wrapper{
+        width: 95%;
     }
     
 }

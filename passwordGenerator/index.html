@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <div class="wrapper">
         <h1 class="header">Pitsaed Password Generator</h1>
         <div class="password-output">
             <input type="text" value="P4$5W0rD!" id="output" readonly class="inactive">
@@ -44,7 +45,7 @@
             </label>
 
             <div class="password-strength">
-                <span>STRENGTH</span>
+                <span class="inactive">STRENGTH</span>
                 <div class="strength">
                     <span id="strength-output">EASY</span>
                     <div class="cells">
@@ -59,6 +60,7 @@
 
             <div class="password-strong"></div>
         </div>
+    </div>
 </body>
 <script src="script.js"></script>
 <script tpye="text/javascript">
