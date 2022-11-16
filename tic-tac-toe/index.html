@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TicTacToe</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <body>
+        <div class="settingsButton">
+            <button onclick="openSettings()"><i class="fa-solid fa-gear"></i></button>
+        </div>
+        <div class="wrapper">
+            <div class="scores">
+                <div class="header">TicTacToe Game</div>
+                <div class="scoreBoard">
+                    <div class="firstScore score">0</div>
+                    <div class="secondScore score">0</div>
+                </div>
+            </div>
+
+            <div class="gameField">
+
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+
+                
+            </div>
+
+            <div class="restartButton">
+                <button onclick="newGame()">Start</button>
+            </div>
+        </div>
+
+        <div class="settingsBar">
+            <div class="closeButton">
+                <button onclick="closeSettings()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="settingsForm">
+                <input class="firstPlayerName nameInput" type="text" placeholder="First Player Name">
+                <input class="secondPlayerName nameInput" type="text" placeholder="Second Player Name">
+                
+                <button class="saveButton" onclick="setInput()">Save</button>
+            </div>
+
+            
+        </div>
+
+        <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/0b5c612be9.js" crossorigin="anonymous"></script>
+    </body>
+
+</html>
