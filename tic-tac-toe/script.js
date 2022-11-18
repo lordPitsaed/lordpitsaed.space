@@ -101,9 +101,11 @@ function addCellListeners() {
 }
 
 function clearGameBoard(){
+    firstPlayer.combination.length = 0;
+    secondPlayer.combination.length = 0;
     for (let i = 0; i< cells.length; i++){
         cells[i].click();
-        firstPlayer.combination.length=0;
+        firstPlayer.combination.length = 0;
         secondPlayer.combination.length = 0;
         cells[i].innerHTML = '';
     }
